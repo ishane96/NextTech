@@ -11,7 +11,7 @@ import SwiftUI
 struct Next_TechApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SearchView()
         }
     }
 }
