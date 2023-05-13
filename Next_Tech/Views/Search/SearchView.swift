@@ -76,8 +76,11 @@ struct SearchView: View {
                 }
             }
         }
+        .padding(.top)
         .alert(isPresented: $viewModel.showAlert) {
-            Alert(title: Text("Oops"), message: Text(viewModel.alertMsg), dismissButton: .cancel(Text("Ok")){})
+            Alert(title: Text("Oops"), message: Text(viewModel.alertMsg), dismissButton: .cancel(Text("Retry")){
+                performSearch(isPaginate: false)
+            })
         }
         .background(Color("#FAFAFA"))
     }
